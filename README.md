@@ -1,10 +1,59 @@
+#JavaScript is Awesome
+
+var _name, _dob, _clock;
+
+function Player(options) {
+  _name = options.name;
+  _dob = options.dob;
+}
+
+Person.prototype = {
+  get age() {
+    return _clock.now() - new Date()
+  }
+  
+  set dob(value) {
+    
+    return this._clock.now() - new Date()
+  }
+}
+
+
+
+
 # javascript-as-a-non-toy-language
+
+##History
+
+ - original purpose
+ - asi
+ 
+
+##The Event Loop
+Single threading benefits.
+Asynchronous code
+setTimeout/setInterval
 
 ##Types
 
+typeof
+instanceof
+
+##Prototypes
+
+{ __proto__: foo }
+Object.setPrototypeOf
+Object.getPrototypeOf
+V8 optimisations via hidden classes
+
+##Scope
 
 
-##Functions as obejcts
+##The Receiver
+
+
+
+##Functions as Obejcts
 
 ```javascript
 function noop() {}
