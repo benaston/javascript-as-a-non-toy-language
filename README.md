@@ -1,13 +1,57 @@
 # javascript-as-a-non-toy-language
 
+##Types
+
+
+
+##Functions as obejcts
+
+```javascript
+function noop() {}
+
+noop.truthy = function() {
+	return true;
+};
+
+noop.falsy = function() {
+	return false;
+};
+
+return noop;
+```
+	
  - noop example
  - examples of implementations in other languages
  - Number and event-loop, performance optimizations, people involved in creation of V8 and historical association
  - origins of Java / JavaScript
- - 
- 
-performance comparisons
-		
+
+performance comparisons 
+
+##Concurrency
+
+##Lazy Evaluation and Thunks
+
+http://stackoverflow.com/questions/17329083/javascript-lazy-evaluation-fibonacci-function?rq=1
+
+	var fib = function (a, b) {
+	  var c = a + b
+	  return { "this": c, "next": function () { return fib(b, c) } }
+	}
+
+Yield.
+
+##Continuations
+
+##Monadic Style
+
+ - Promises, deferreds
+
+##Recursion
+
+##Closures
+
+##Currying (partial application)
+
 	function partial(fn) {
 	  var args, slice;
 	
