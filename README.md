@@ -1,5 +1,6 @@
 #JavaScript is Awesome
 
+```javascript
 var _name, _dob, _clock;
 
 function Player(options) {
@@ -17,6 +18,7 @@ Person.prototype = {
     return this._clock.now() - new Date()
   }
 }
+```
 
 
 
