@@ -20,6 +20,111 @@ Person.prototype = {
 }
 ```
 
+```javascript
+var myGame = { utils: {} };
+
+(function(app) {}
+
+    function Clock() {
+    }
+
+    Player.prototype.now = function() {
+    	return new Date();
+    };
+
+    app.utils.clock = new Clock();
+
+}(myGame));
+
+
+(function(app) {}
+
+    var _name, _dob, _clock, _dobPattern;
+
+    _dobPattern = /\d{2}\/\d{2}\/\d{4}/;
+    _clock = app.utils.clock;
+
+    function Player(options) {
+
+        _name = options.name;
+        _dob = options.dob;
+
+    }
+
+    Player.prototype = {
+
+        get age() {
+
+            return _clock.now() - new Date()
+
+        },
+
+        get dob() {
+
+        	return _dob;
+
+        },
+
+        set dob(value) {
+
+        	if(!value.match(_dobPattern)) {
+        		throw 'dob must match pattern dd/mm/yyy.';
+        	}
+
+            _dob = value;
+
+        }
+
+    };
+
+}(myGame));
+
+
+
+(function(testRunner) {}
+
+    var describe = testRunner.describe, testRunner.it, testRunner.expect;
+
+    _dobPattern = /\d{2}\/\d{2}\/\d{4}/;
+    _clock = app.utils.clock;
+
+    function Player(options) {
+
+        _name = options.name;
+        _dob = options.dob;
+
+    }
+
+    Player.prototype = {
+
+        get age() {
+
+            return _clock.now() - new Date()
+
+        },
+
+        get dob() {
+
+        	return _dob;
+
+        },
+
+        set dob(value) {
+
+        	if(!value.match(_dobPattern)) {
+        		throw 'dob must match pattern dd/mm/yyy.';
+        	}
+
+            _dob = value;
+
+        }
+
+    };
+
+}(testRunner));
+
+```
+
 
 
 
